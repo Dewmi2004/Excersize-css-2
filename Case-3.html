@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <title>Case-3</title>
     <style>
+        :root{
+            --section-width:800px;
+            --section-height:800px;
+            --div-width:100px;
+            --div-height:50px;
+        }
         section{
-            width: 700px;
-            height: 700px;
+            width: var(--section-width);
+            height: var(--section-height);
             position: relative;
             background: lightblue;
             overflow: hidden;
         }
         section>div{
-            width:100px;
-            height: 50px;
+            width:var(--div-width);
+            height: var(--div-height);
             background:goldenrod;
             border-radius: 10%;
             animation-name: cube;
@@ -33,7 +39,7 @@
           }
             25%{
                 background: green;
-                margin-top:650px;
+                margin-top:calc(var(--section-height) - var(--div-height));
                 margin-left: 0;
                 transform: rotate(140deg);
 
@@ -41,15 +47,15 @@
             }
             50%{
                 background: darkblue;
-                margin-left:600px;
-                margin-top:650px;
+                margin-left:calc(var(--section-width) - var(--div-width));
+                margin-top:calc(var(--section-height) -  var(--div-height));
                 transform: rotate(210deg);
 
             }
             75%{
                 background: purple;
                 margin-top:0;
-                margin-left:600px;
+                margin-left:calc(var(--section-width) - var(--div-width));
                 transform: rotate(280deg);
 
             }
