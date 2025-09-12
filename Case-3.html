@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case-3</title>
+    <style>
+        section{
+            width: 700px;
+            height: 700px;
+            position: relative;
+            background: lightblue;
+            overflow: hidden;
+        }
+        section>div{
+            width:100px;
+            height: 50px;
+            background:goldenrod;
+            border-radius: 10%;
+            animation-name: cube;
+            animation-duration: 3000ms;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            position: absolute;
+            transform: rotate(0deg);
+        }
+        @keyframes cube {
+          0%{
+              background: goldenrod;
+              margin-top: 0;
+              margin-left: 0;
+              transform: rotate(70deg);
+
+          }
+            25%{
+                background: green;
+                margin-top:650px;
+                margin-left: 0;
+                transform: rotate(140deg);
+
+
+            }
+            50%{
+                background: darkblue;
+                margin-left:600px;
+                margin-top:650px;
+                transform: rotate(210deg);
+
+            }
+            75%{
+                background: purple;
+                margin-top:0;
+                margin-left:600px;
+                transform: rotate(280deg);
+
+            }
+            100%{
+                background: darkred;
+                margin-left: 0;
+                margin-top: 0;
+                transform: rotate(360deg);
+
+            }
+        }
+    </style>
+</head>
+<body>
+<section>
+<div></div>
+</section>
+</body>
+</html>
